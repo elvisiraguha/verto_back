@@ -1,26 +1,28 @@
 {
-  "name": "swap-mechanizm",
+  "name": "verto-back",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "babel src -d dist",
+    "predev": "npm run migrate && npm run seed",
     "dev": "nodemon --exec babel-node -- src/server.js",
+    "prestart": "npm run migrate && npm run seed && npm run build",
     "start": "node dist/server.js",
     "migrate": "sequelize db:migrate",
     "seed": "sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elvisiraguha/swap-mechanizm.git"
+    "url": "git+https://github.com/elvisiraguha/verto-back.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elvisiraguha/swap-mechanizm/issues"
+    "url": "https://github.com/elvisiraguha/verto-back/issues"
   },
-  "homepage": "https://github.com/elvisiraguha/swap-mechanizm#readme",
+  "homepage": "https://github.com/elvisiraguha/verto-back#readme",
   "dependencies": {
     "@babel/cli": "^7.17.6",
     "@sequelize/core": "^7.0.0-alpha.10",
