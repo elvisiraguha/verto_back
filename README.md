@@ -1,19 +1,19 @@
-# Ampersand Battery Swap Network (APIs)
+# Drivers Monitoring and Management Application
 
-a RESTful APIs for Ampersand Network & Battery swapping mechanism
+a RESTful APIs
 
 ## Setup locally
 
 `clone this repository`
 
 ```
-git clone https://github.com/elvisiraguha/swap-mechanizm.git
+git clone https://github.com/elvisiraguha/verto_back.git
 ```
 
 `checkout into the repository folder`
 
 ```
-cd swap-mechanizm
+cd verto_back
 ```
 
 `install dependencies`
