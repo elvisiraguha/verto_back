@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src -d dist",
     "dev": "nodemon --exec babel-node -- src/server.js",
-    "prestart": "npm install && npm run migrate && npm run seed && npm run build",
+    "prestart": "npm run build && npm run migrate && npm run seed",
     "start": "node dist/server.js",
     "migrate": "sequelize db:migrate",
     "seed": "sequelize db:seed:all"
@@ -31,13 +31,13 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "jsonwebtoken": "^9.0.0",
+    "netlify-lambda": "^2.0.16",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "redis": "^4.0.4",
-    "sequelize": "^6.17.0"
-  },
-  "devDependencies": {
+    "sequelize": "^6.17.0",
+    "serverless-http": "^3.2.0",
     "@babel/core": "^7.17.5",
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
