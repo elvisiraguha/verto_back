@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src -d dist",
-    "predev": "npm run migrate && npm run seed",
     "dev": "nodemon --exec babel-node -- src/server.js",
-    "prestart": "npm run migrate && npm run seed && npm run build",
+    "prestart": "npm install && npm run migrate && npm run seed && npm run build",
     "start": "node dist/server.js",
     "migrate": "sequelize db:migrate",
     "seed": "sequelize db:seed:all"
