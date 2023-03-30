@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel src -d dist",
     "dev": "nodemon --exec babel-node -- src/server.js",
+    "start": "node dist/server.js",
     "migrate": "sequelize db:migrate",
     "seed": "sequelize db:seed:all"
   },
